@@ -16,6 +16,9 @@ function OutputField() {
 
   const netTips = totalTips - busserTips - barTips - runnerTips;
 
+  const partnerTips = (netTips / 2).toFixed(2);
+  const selfTips = netTips - partnerTips;
+
   useEffect(
     function () {
       setBarTips(Math.ceil(totalTips * 0.05).toFixed(2));
@@ -59,16 +62,8 @@ function OutputField() {
       )}
       {partner == "pool" && (
         <>
-          <TextField
-            label="Partner Tips"
-            id="partner"
-            value={`${netTips.toFixed(2) / 2}`}
-          />
-          <TextField
-            label="Net Tips"
-            id="net"
-            value={`${netTips.toFixed(2) / 2}`}
-          />
+          <TextField label="Partner Tips" id="partner" value={partnerTips} />
+          <TextField label="Net Tips" id="net" value={selfTips} />
         </>
       )}
     </div>
