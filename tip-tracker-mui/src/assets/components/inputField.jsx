@@ -3,6 +3,7 @@ import TextField from "@mui/material/TextField";
 import Slider from "@mui/material/Slider";
 import PartnerToggle from "./partnerToggle";
 import { useTipout } from "./tipoutContext";
+import CreditCardIcon from "@mui/icons-material/CreditCard";
 
 function InputField() {
   const { ccTips, setCcTips, cashTips, setCashTips, setBusser } = useTipout();
@@ -22,12 +23,12 @@ function InputField() {
   return (
     <div>
       <TextField
-        label="Credit Card Tips"
+        label="💳 Credit Card Tips"
         value={ccTips}
         onChange={handleCcTipsChange}
       />
       <TextField
-        label="Cash Tips"
+        label="💵 Cash Tips"
         value={cashTips}
         onChange={handleCashTipsChange}
       />
