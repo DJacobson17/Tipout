@@ -5,7 +5,11 @@ import PartnerToggle from "./partnerToggle";
 import { useTipout } from "./tipoutContext";
 
 function InputField() {
-  const { ccTips, setCcTips, cashTips, setCashTips } = useTipout();
+  const { ccTips, setCcTips, cashTips, setCashTips, setBusser } = useTipout();
+
+  const handleBusserChange = (event) => {
+    setBusser(event.target.value);
+  };
 
   const handleCcTipsChange = (event) => {
     setCcTips(event.target.value);
@@ -29,6 +33,7 @@ function InputField() {
       />
       <Slider
         defaultValue={20}
+        onChange={handleBusserChange}
         aria-labelledby="discrete-slider"
         valueLabelDisplay="auto"
         step={1}

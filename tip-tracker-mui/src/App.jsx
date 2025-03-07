@@ -7,6 +7,7 @@ import { Input, Output } from "@mui/icons-material";
 import { TipoutProvider } from "./assets/components/tipoutContext";
 import InputField from "./assets/components/inputField";
 import Header from "./assets/components/header";
+import OutputField from "./assets/components/outputField";
 
 export default function App() {
   return (
@@ -15,7 +16,7 @@ export default function App() {
       <main>
         <TipoutProvider>
           <InputField />
-          <Output />
+          <OutputField />
         </TipoutProvider>
       </main>
     </div>

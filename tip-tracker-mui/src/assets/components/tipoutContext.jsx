@@ -8,10 +8,6 @@ function TipoutProvider({ children }) {
   const [busser, setBusser] = useState(20);
   const [partner, setPartner] = useState("solo");
 
-  const handleBusserChange = (event) => {
-    setBusser(event.target.value);
-  };
-
   const value = useMemo(() => {
     return {
       ccTips,
@@ -22,7 +18,6 @@ function TipoutProvider({ children }) {
       setBusser,
       partner,
       setPartner,
-      handleBusserChange,
     };
   }, [ccTips, cashTips, busser, partner]);
 
