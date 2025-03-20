@@ -24,11 +24,13 @@ function InputField() {
     <div>
       <TextField
         label="💳 Credit Card Tips"
+        type="number"
         value={ccTips}
         onChange={handleCcTipsChange}
       />
       <TextField
         label="💵 Cash Tips"
+        type="number"
         value={cashTips}
         onChange={handleCashTipsChange}
       />

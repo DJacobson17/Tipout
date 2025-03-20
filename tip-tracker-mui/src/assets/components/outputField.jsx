@@ -59,12 +59,27 @@ function OutputField() {
         onChange={(event) => setBarTips(event.target.value)}
       />
       {partner == "solo" && (
-        <TextField label="Net Tips" id="net" value={`${netTips.toFixed(2)}`} />
+        <TextField
+          label="Net Tips"
+          id="net"
+          value={`${netTips.toFixed(2)}`}
+          disabled
+        />
       )}
       {partner == "pool" && (
         <>
-          <TextField label="Partner Tips" id="partner" value={partnerTips} />
-          <TextField label="Net Tips" id="net" value={selfTips} />
+          <TextField
+            label="Partner Tips"
+            id="partner"
+            value={partnerTips}
+            disabled
+          />
+          <TextField
+            label="Net Tips"
+            id="net"
+            value={selfTips.toFixed(2)}
+            disabled
+          />
         </>
       )}
     </div>
